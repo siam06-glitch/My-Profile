@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+<div class="container">
+
+<a class="navbar-brand" href="index.html">Siam Portfolio</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+
+<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+
+<li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- Page Title -->
+
+<section class="bg-success text-white text-center py-5">
+
+<div class="container">
+
+<h1>Contact Me</h1>
+
+<p>Get In Touch</p>
+
+</div>
+
+</section>
+
+<!-- Contact Info -->
+
+<section class="py-5">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-lg-4">
+
+<h3>Contact Information</h3>
+
+<p><strong>Address:</strong> Dhaka, Bangladesh</p>
+
+<p><strong>Phone:</strong> +8801XXXXXXXXX</p>
+
+<p><strong>Email:</strong> siam47249@email.com</p>
+
+<p><strong>Website:</strong> www.myportfolio.com</p>
+
+</div>
+
+<!-- Contact Form -->
+
+<div class="col-lg-8">
+
+<h3>Send Message</h3>
+
+<form id="contactForm">
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+
+<input type="text" id="name" class="form-control" placeholder="Your Name">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<input type="email" id="email" class="form-control" placeholder="Your Email">
+
+</div>
+
+</div>
+
+<div class="mb-3">
+
+<input type="text" id="phone" class="form-control" placeholder="Phone Number">
+
+</div>
+
+<div class="mb-3">
+
+<input type="text" id="address" class="form-control" placeholder="Address">
+
+</div>
+
+<div class="mb-3">
+
+<textarea id="message" rows="5" class="form-control" placeholder="Your Message"></textarea>
+
+</div>
+
+<button type="submit" class="btn btn-success">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Google Map -->
+
+<section class="pb-5">
+
+<div class="container" id="map">
+
+<h3 class="text-center mb-4">My Location</h3>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.849393842342!2d90.3568249756897!3d23.823953978620395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c19be52acff3%3A0x704eb6971cb9fc9!2sExtension%20Pallabi!5e0!3m2!1sen!2sbd!4v1784642431813!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" ></iframe>"
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="text-center text-white p-4">
+
+<p>© 2026 Siam Mahamud | All Rights Reserved</p>
+
+</footer>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Validation JS -->
+
+<script>
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let phone = document.getElementById("phone").value;
+let address = document.getElementById("address").value;
+let message = document.getElementById("message").value;
+
+if(name == "" || email == "" || phone == "" || address == "" || message == ""){
+
+alert("All fields are required!");
+
+return;
+
+}
+
+if(phone.length < 11){
+
+alert("Phone number must be at least 11 digits!");
+
+return;
+
+}
+
+alert("Message Sent Successfully!");
+
+});
+
+</script>
+
+</body>
+</html>
